@@ -20,10 +20,10 @@ As it's represented in the folowing image, that's the way in wich nodes comunica
 
 First of all to run the code correctly download this package inside your ROS workspace. Then follow the following commands inside your ROS workspace:
 
--roscore &
--catkin_make
--rosrun srv_first_assignment
--rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
--rosrun first_assignment robot_controller
+*roscore &
+*catkin_make
+*rosrun srv_first_assignment
+*rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
+*rosrun first_assignment robot_controller
 
 Then you should see the robot who moves to catch the position it receives from Server (you can see the position by having a look to the logs the Server node provides).
