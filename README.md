@@ -18,7 +18,7 @@ As it's represented in the folowing image, that's the way in wich nodes comunica
 
 ## How to run the code
 
-First of all to run the code correctly download this package inside your ROS workspace. Then follow the following commands inside your ROS workspace:
+First of all to run the code correctly download this package and copy these three subfolders (assignment1, first_assignment and srv_first_assignment) inside your ROS workspace. Then follow the following commands inside your ROS workspace:
 
 * roscore &
 * catkin_make
