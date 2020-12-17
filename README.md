@@ -22,7 +22,7 @@ First of all to run the code correctly download this package inside your ROS wor
 
 * roscore &
 * catkin_make
-* rosrun srv_first_assignment
+* rosrun srv_first_assignment Server
 * rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
 * rosrun first_assignment robot_controller
 
