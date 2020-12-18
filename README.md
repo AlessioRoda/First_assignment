@@ -29,3 +29,4 @@ First of all to run the code correctly download this package inside your ROS wor
 Then you should see the robot who moves to catch the position it receives from Server (you can see the position by having a look to the logs the /Server node provides).
 
 
+
