@@ -1,0 +1,112 @@
+\hypertarget{robot__controller_8cpp}{}\section{first\+\_\+assignment/src/robot\+\_\+controller.cpp File Reference}
+\label{robot__controller_8cpp}\index{first\+\_\+assignment/src/robot\+\_\+controller.\+cpp@{first\+\_\+assignment/src/robot\+\_\+controller.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Odometry.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}srv\+\_\+first\+\_\+assignment/\+Server.\+h\char`\"{}}\newline
+Include dependency graph for robot\+\_\+controller.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{robot__controller_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{robot__controller_8cpp_aab6e381bffc34921244a29ec0538ba64}{position\+Callback} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{robot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{robot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\item 
+ros\+::\+Service\+Client \hyperlink{robot__controller_8cpp_a17bcd065930a8a7f9f194078d9977268}{client}
+\item 
+srv\+\_\+first\+\_\+assignment\+::\+Server \hyperlink{robot__controller_8cpp_ae75a66aaf2761f4febba3ba2a55c9133}{rec\+\_\+pos}
+\item 
+float \hyperlink{robot__controller_8cpp_a23b231f4f8af79d2071b60cbacebfc99}{position\+\_\+x} =0
+\item 
+float \hyperlink{robot__controller_8cpp_af31f30f5c4fab9afb7dedf677d53104b}{position\+\_\+y} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{robot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{robot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!main@{main}}
+\index{main@{main}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Make the request to the server by setting the maximun and minimum values in wich there must be the position to catch 
+
+Definition at line 59 of file robot\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{robot__controller_8cpp_aab6e381bffc34921244a29ec0538ba64}\label{robot__controller_8cpp_aab6e381bffc34921244a29ec0538ba64}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!position\+Callback@{position\+Callback}}
+\index{position\+Callback@{position\+Callback}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{position\+Callback()}{positionCallback()}}
+{\footnotesize\ttfamily void position\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+The position\+Callback has to check if the current position of the robot is the same as the one that it\textquotesingle{}s received from the Server. If the distance between the robot is less than 0.\+1 the position that Server gave is catched, otherwise the velocity of the robot is set proportionally respect to the remaining distance. Since the position is catched, now it asks for a new position. The position is always between the values -\/6.\+0 to 6.\+0 either for x both for y
+
+From the topic geometry\+\_\+msgs we get the velocity to set in the robot 
+
+Definition at line 26 of file robot\+\_\+controller.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{robot__controller_8cpp_a17bcd065930a8a7f9f194078d9977268}\label{robot__controller_8cpp_a17bcd065930a8a7f9f194078d9977268}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!client@{client}}
+\index{client@{client}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client client}
+
+
+
+Definition at line 10 of file robot\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{robot__controller_8cpp_a23b231f4f8af79d2071b60cbacebfc99}\label{robot__controller_8cpp_a23b231f4f8af79d2071b60cbacebfc99}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!position\+\_\+x@{position\+\_\+x}}
+\index{position\+\_\+x@{position\+\_\+x}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{position\+\_\+x}{position\_x}}
+{\footnotesize\ttfamily float position\+\_\+x =0}
+
+Values of te position received from the server, intialized to 0 
+
+Definition at line 18 of file robot\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{robot__controller_8cpp_af31f30f5c4fab9afb7dedf677d53104b}\label{robot__controller_8cpp_af31f30f5c4fab9afb7dedf677d53104b}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!position\+\_\+y@{position\+\_\+y}}
+\index{position\+\_\+y@{position\+\_\+y}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{position\+\_\+y}{position\_y}}
+{\footnotesize\ttfamily float position\+\_\+y =0}
+
+
+
+Definition at line 19 of file robot\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{robot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}\label{robot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!pub@{pub}}
+\index{pub@{pub}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily ros\+::\+Publisher pub}
+
+Initialize the publisher and the client 
+
+Definition at line 9 of file robot\+\_\+controller.\+cpp.
+
+\mbox{\Hypertarget{robot__controller_8cpp_ae75a66aaf2761f4febba3ba2a55c9133}\label{robot__controller_8cpp_ae75a66aaf2761f4febba3ba2a55c9133}} 
+\index{robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}!rec\+\_\+pos@{rec\+\_\+pos}}
+\index{rec\+\_\+pos@{rec\+\_\+pos}!robot\+\_\+controller.\+cpp@{robot\+\_\+controller.\+cpp}}
+\subsubsection{\texorpdfstring{rec\+\_\+pos}{rec\_pos}}
+{\footnotesize\ttfamily srv\+\_\+first\+\_\+assignment\+::\+Server rec\+\_\+pos}
+
+To connect to the server in srv\+\_\+first\+\_\+package/src/\+Server.\+cpp 
+
+Definition at line 15 of file robot\+\_\+controller.\+cpp.
+

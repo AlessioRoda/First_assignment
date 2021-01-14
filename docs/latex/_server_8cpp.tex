@@ -1,0 +1,54 @@
+\hypertarget{_server_8cpp}{}\section{srv\+\_\+first\+\_\+assignment/src/\+Server.cpp File Reference}
+\label{_server_8cpp}\index{srv\+\_\+first\+\_\+assignment/src/\+Server.\+cpp@{srv\+\_\+first\+\_\+assignment/src/\+Server.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}srv\+\_\+first\+\_\+assignment/\+Server.\+h\char`\"{}}\newline
+Include dependency graph for Server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{_server_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{_server_8cpp_a10f83119b77a8fbd085a5550955f85ff}{rand\+M\+ToN} (double M, double N)
+\item 
+bool \hyperlink{_server_8cpp_a19c0b859a4065da7aa4cca8256c80a84}{myrandom} (srv\+\_\+first\+\_\+assignment\+::\+Server\+::\+Request \&req, srv\+\_\+first\+\_\+assignment\+::\+Server\+::\+Response \&res)
+\item 
+int \hyperlink{_server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{_server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Server.\+cpp@{Server.\+cpp}!main@{main}}
+\index{main@{main}!Server.\+cpp@{Server.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Server.\+cpp.
+
+\mbox{\Hypertarget{_server_8cpp_a19c0b859a4065da7aa4cca8256c80a84}\label{_server_8cpp_a19c0b859a4065da7aa4cca8256c80a84}} 
+\index{Server.\+cpp@{Server.\+cpp}!myrandom@{myrandom}}
+\index{myrandom@{myrandom}!Server.\+cpp@{Server.\+cpp}}
+\subsubsection{\texorpdfstring{myrandom()}{myrandom()}}
+{\footnotesize\ttfamily bool myrandom (\begin{DoxyParamCaption}\item[{srv\+\_\+first\+\_\+assignment\+::\+Server\+::\+Request \&}]{req,  }\item[{srv\+\_\+first\+\_\+assignment\+::\+Server\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+Get the interval in wich to calculate the random number, then pass it to rand\+M\+ToN to generate the random number 
+
+Definition at line 9 of file Server.\+cpp.
+
+\mbox{\Hypertarget{_server_8cpp_a10f83119b77a8fbd085a5550955f85ff}\label{_server_8cpp_a10f83119b77a8fbd085a5550955f85ff}} 
+\index{Server.\+cpp@{Server.\+cpp}!rand\+M\+ToN@{rand\+M\+ToN}}
+\index{rand\+M\+ToN@{rand\+M\+ToN}!Server.\+cpp@{Server.\+cpp}}
+\subsubsection{\texorpdfstring{rand\+M\+To\+N()}{randMToN()}}
+{\footnotesize\ttfamily double rand\+M\+ToN (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{N }\end{DoxyParamCaption})}
+
+Function to calculate the random number in the given interval 
+
+Definition at line 5 of file Server.\+cpp.
+
