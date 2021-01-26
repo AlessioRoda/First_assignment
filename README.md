@@ -16,6 +16,10 @@ As it's represented in the folowing image, that's the way in wich nodes comunica
 
 ![github-small](https://user-images.githubusercontent.com/48511957/101025417-74aaf380-356d-11eb-8549-9952303d6bf4.png)
 
+
+## Considerations
+In this case the orientation of the robot does't change, so it is possible to reach the goal simply by setting a linear velocity to move from the robot position to the goal position. In a more complex case in general we should have to take care also to the robot orientation to let it move in a certain position.
+
 ## How to run the code
 
 First of all to run the code correctly download this package inside your ROS workspace. Then follow the following commands inside your ROS workspace:
